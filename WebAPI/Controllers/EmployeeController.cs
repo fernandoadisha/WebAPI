@@ -169,12 +169,14 @@ namespace WebAPI.Controllers
 
         }
 
+        /* error in this lines of code
+         
         [Route("GetAllDepartmentNames")]
         public JsonResult GetAllDepartmentNames()
         {
+
             string query = @"
-                 SELECT DepartmentName from dbo.Department;   
-                ";
+                    SELECT * FROM dbo.Employee";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
             SqlDataReader myReader;
@@ -195,6 +197,7 @@ namespace WebAPI.Controllers
 
             return new JsonResult(table);
         }
+        */
             
     }
 }
